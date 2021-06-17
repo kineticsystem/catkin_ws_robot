@@ -1,6 +1,6 @@
 #!/bin/sh
-xfce4-terminal -T "Gazebo" -e "gazebo" &
+xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Gazebo" -e "gazebo" &
 sleep 5
-xfce4-terminal -T "ROSCore" -e "source /opt/ros/kinetic/setup.bash; roscore" & 
+xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "ROS" -e "source /opt/ros/kinetic/setup.bash; roscore" & 
 sleep 5
-xfce4-terminal -T "RVIZ" -e "rosrun rviz rviz"
+xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "RVIZ" -e "rosrun rviz rviz"
