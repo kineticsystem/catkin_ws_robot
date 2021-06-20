@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pick_objects</name>
+  <version>0.0.0</version>
+  <description>Package to send goals to the robot</description>
+
+  <maintainer email="g.remigi@kineticsystem.org">Giovanni Remigi</maintainer>
+  <author email="g.remigi@kineticsystem.org">Giovanni Remigi</author>
+
+  <license>BSD</license>
+
+  <!-- Build tool packages -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build and runtime dependencies -->
+  <depend>roscpp</depend>
+  <depend>actionlib</depend>
+  <depend>move_base_msgs</depend>
+
+  <!-- Runtime dependencies -->
+  <exec_depend>gazebo_ros</exec_depend>
+
+  <export>
+    <!--<gazebo_ros gazebo_model_path="${prefix}/models"/>-->
+
+    <!-- This is required for Gazebo to find package materials.  -->
+    <!-- Use this instruction to show where Gazebo will look for -->
+    <!-- materials when executed as a ROS plugin.                -->
+    <!-- rospack plugins -attrib="gazebo_media_path" gazebo_ros  -->
+    <gazebo_ros gazebo_media_path="${prefix}"/>
+  </export>
+
+</package>
