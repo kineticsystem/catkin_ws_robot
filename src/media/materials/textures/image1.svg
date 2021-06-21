@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 744.09449 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/giovanni/catkin_ws_map/src/my_robot/media/materials/textures/logo.png"
+   inkscape:export-xdpi="96.761902"
+   inkscape:export-ydpi="96.761902">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="123.39618"
+     inkscape:cy="627.95207"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-midpoints="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1149"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,1"
+       id="guide3353"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,744.09449"
+       orientation="1,0"
+       id="guide3355"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,744.09449"
+       orientation="0,1"
+       id="guide3357"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="744.0945,744.09449"
+       orientation="1,0"
+       id="guide3359"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#b3b3b3;fill-rule:evenodd;stroke:none;stroke-width:1.6511476px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3361"
+       width="742.44336"
+       height="742.44336"
+       x="0.8255738"
+       y="309.09332" />
+    <ellipse
+       style="fill:#ffffff;stroke:none"
+       id="path4182"
+       cx="372.46002"
+       cy="680.72778"
+       rx="329.20804"
+       ry="329.20801" />
+    <g
+       id="g3348"
+       transform="matrix(0.54626015,0,0,0.54626017,150.4217,260.49764)">
+      <path
+         inkscape:export-ydpi="1.8"
+         inkscape:export-xdpi="1.8"
+         inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\anaglyph16.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3759-17"
+         d="m 234.71429,434.93364 171,0 8.08122,685.99996 -294.08122,0 z"
+         style="fill:#ff0000;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:export-ydpi="1.8"
+         inkscape:export-xdpi="1.8"
+         inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\anaglyph16.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3759-4-4"
+         d="m 405.71429,434.93364 171,0 115.00008,685.99996 -286.00008,0 z"
+         style="fill:#00ff00;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="cccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect3759"
+         d="M 234.71429,320.93364 5.7142857,1120.9336 l 800.0000043,0 -229,-799.99996 z m 81.36719,114 179.26562,0 163.73438,571.99996 -506.73438,0 z"
+         style="fill:#000000;fill-opacity:1;stroke:none" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 744.09449 744.09448"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="image2.svg"
+   inkscape:export-filename="/home/giovanni/catkin_ws_map/src/my_robot/media/materials/textures/limage2.png"
+   inkscape:export-xdpi="96.761902"
+   inkscape:export-ydpi="96.761902">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-184.70034"
+     inkscape:cy="627.95207"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:object-nodes="false"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:snap-object-midpoints="false"
+     inkscape:snap-midpoints="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-others="false"
+     inkscape:snap-nodes="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1149"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       position="0,0"
+       orientation="0,1"
+       id="guide3353"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,744.09449"
+       orientation="1,0"
+       id="guide3355"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="0,744.09449"
+       orientation="0,1"
+       id="guide3357"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="744.0945,744.09449"
+       orientation="1,0"
+       id="guide3359"
+       inkscape:label=""
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-308.26772)">
+    <rect
+       style="fill:#b3b3b3;fill-rule:evenodd;stroke:none;stroke-width:1.6511476px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3361"
+       width="742.44336"
+       height="742.44336"
+       x="0.8255738"
+       y="309.09332" />
+    <ellipse
+       style="fill:#ffffff;stroke:none"
+       id="path4182"
+       cx="372.46002"
+       cy="680.72778"
+       rx="329.20804"
+       ry="329.20801" />
+    <path
+       style="fill:#555753;fill-opacity:1;stroke:none"
+       d="m 279.19743,435.80342 62.56506,0 -125.67894,439.05308 -62.56505,0 z"
+       id="rect3759-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\interlacer16.png"
+       inkscape:export-xdpi="1.7999998"
+       inkscape:export-ydpi="1.7999998" />
+    <path
+       style="fill:#555753;fill-opacity:1;stroke:none"
+       d="m 279.19743,435.80342 62.56506,0 0,439.05308 -62.56506,0 z"
+       id="rect3759-1-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\interlacer16.png"
+       inkscape:export-xdpi="1.7999998"
+       inkscape:export-ydpi="1.7999998" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#555753;fill-opacity:1;stroke:none"
+       d="m 404.32755,435.80342 62.5651,0 0,439.05302 -62.5651,0 z"
+       id="rect3759-7-7"
+       inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\interlacer16.png"
+       inkscape:export-xdpi="1.7999998"
+       inkscape:export-ydpi="1.7999998" />
+    <path
+       style="fill:#555753;fill-opacity:1;stroke:none"
+       d="m 404.32755,435.80342 62.56506,0 125.67901,439.05308 -62.56511,0 z"
+       id="rect3759-4-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="D:\Programming\Workspaces\interlacer\resources\icons\interlacer16.png"
+       inkscape:export-xdpi="1.7999998"
+       inkscape:export-ydpi="1.7999998" />
+  </g>
+</svg>

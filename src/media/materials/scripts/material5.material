@@ -1,0 +1,14 @@
+material Material5
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture image5.png
+                scale 1 1
+            }
+        }   
+    }
+}

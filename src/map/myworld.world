@@ -945,8 +945,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://src/my_robot/media/materials/scripts</uri>
-              <uri>file://src/my_robot/media/materials/textures</uri>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
               <name>Material4</name>
             </script>
             <ambient>1 1 1 1</ambient>
@@ -1047,8 +1047,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://src/my_robot/media/materials/scripts</uri>
-              <uri>file://src/my_robot/media/materials/textures</uri>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
               <name>Material3</name>
             </script>
             <ambient>1 1 1 1</ambient>
@@ -1149,8 +1149,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://src/my_robot/media/materials/scripts</uri>
-              <uri>file://src/my_robot/media/materials/textures</uri>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
               <name>Material2</name>
             </script>
             <ambient>1 1 1 1</ambient>
@@ -1251,8 +1251,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://src/my_robot/media/materials/scripts</uri>
-              <uri>file://src/my_robot/media/materials/textures</uri>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
               <name>Material1</name>
             </script>
             <ambient>1 1 1 1</ambient>
@@ -1353,8 +1353,8 @@
           </geometry>
           <material>
             <script>
-              <uri>file://src/my_robot/media/materials/scripts</uri>
-              <uri>file://src/my_robot/media/materials/textures</uri>
+              <uri>file://media/materials/scripts</uri>
+              <uri>file://media/materials/textures</uri>
               <name>Material5</name>
             </script>
             <ambient>1 1 1 1</ambient>
