@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Run Gazebo.
 xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Gazebo" -e "
