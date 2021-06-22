@@ -2,6 +2,8 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
 
+// See http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals
+
 // Define a client for to send goal requests to the move_base server through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
@@ -20,11 +22,12 @@ int main(int argc, char** argv){
 
   move_base_msgs::MoveBaseGoal goal;
 
-  // set up the frame parameters
+  // Set up the frame parameters.
   goal.target_pose.header.frame_id = "map";
   goal.target_pose.header.stamp = ros::Time::now();
 
   // Define a position and orientation for the robot to reach
+
   goal.target_pose.pose.position.x = 1.0;
   goal.target_pose.pose.orientation.w = 1.0;
 
@@ -37,9 +40,9 @@ int main(int argc, char** argv){
 
   // Check if the robot reached its goal
   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
-    ROS_INFO("Hooray, the base moved 1 meter forward");
+      ROS_INFO("The base moved 1 meter succesfully.");
   } else {
-    ROS_INFO("The base failed to move forward 1 meter for some reason");
+      ROS_INFO("The base failed to move for some reason.");
   }
 
   do {
