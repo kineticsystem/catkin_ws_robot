@@ -1,2 +1,5 @@
-# catkin_ws_robot
-Udacity Robotics Engineering - Home Service Robot
+# Udacity Robotics Engineering - Home Service Robot
+
+## Test navigation
+Following a test navigation to a given goal.
+![AMCL](AMCL.gif "AMCL")
