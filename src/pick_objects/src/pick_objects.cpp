@@ -6,10 +6,11 @@
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
 int main(int argc, char** argv){
+
   // Initialize the simple_navigation_goals node
   ros::init(argc, argv, "simple_navigation_goals");
 
-  //tell the action client that we want to spin a thread by default
+  // Tell the action client that we want to spin a thread by default.
   MoveBaseClient ac("move_base", true);
 
   // Wait 5 sec for move_base action server to come up
@@ -35,10 +36,15 @@ int main(int argc, char** argv){
   ac.waitForResult();
 
   // Check if the robot reached its goal
-  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+  if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
     ROS_INFO("Hooray, the base moved 1 meter forward");
-  else
+  } else {
     ROS_INFO("The base failed to move forward 1 meter for some reason");
+  }
+
+  do {
+     std::cout << '\n' << "Press a key to continue...";
+  } while (std::cin.get() != '\n');
 
   return 0;
 }

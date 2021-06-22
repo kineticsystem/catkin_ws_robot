@@ -160,7 +160,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='static_box_4'>
+      <model name='cube_4'>
         <pose frame=''>-2.42867 2.42843 0.35 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -170,7 +170,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='static_box_2'>
+      <model name='cube_2'>
         <pose frame=''>2.43691 -1.51717 0.35 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -180,7 +180,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='static_box_1'>
+      <model name='cube_1'>
         <pose frame=''>2.44482 2.43769 0.35 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -190,7 +190,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='static_box_5'>
+      <model name='cube_5'>
         <pose frame=''>-1.6452 -1.6423 0.35 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -200,7 +200,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='static_box_3'>
+      <model name='cube_3'>
         <pose frame=''>-0.454601 2.44203 0.35 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
@@ -920,7 +920,7 @@
       <static>1</static>
     </model>
     <wind/>
-    <model name='static_box_4'>
+    <model name='cube_4'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -1022,7 +1022,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>-2.42867 2.42843 0.35 0 -0 0</pose>
     </model>
-    <model name='static_box_3'>
+    <model name='cube_3'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -1124,7 +1124,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>-0.454601 2.44203 0.35 0 -0 0</pose>
     </model>
-    <model name='static_box_2'>
+    <model name='cube_2'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -1226,7 +1226,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>1.83691 -1.86717 0.35 0 -0 0</pose>
     </model>
-    <model name='static_box_1'>
+    <model name='cube_1'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -1328,7 +1328,7 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>2.44482 2.42769 0.35 0 -0 0</pose>
     </model>
-    <model name='static_box_5'>
+    <model name='cube_5'>
       <link name='link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
