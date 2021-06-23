@@ -25,3 +25,14 @@ sleep 5
 # Run Pick Objects node.
 xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Add Markers" -e "
 roslaunch add_markers add_markers.launch" &
+sleep 5
+
+# Run Pick Objects node.
+xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Pick Objects" -e "
+roslaunch pick_objects pick_objects.launch;" &
+sleep 5
+
+# Send two custom goals.
+rostopic pub -1 /navigation_targets pick_objects/NavigationTarget -- 1.325962 1.325962 pick-up;
+sleep 5
+rostopic pub -1 /navigation_targets pick_objects/NavigationTarget -- 1.325962 -1.325962 drop-off;

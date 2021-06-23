@@ -1,11 +1,13 @@
 #include <ros/ros.h>
-#include <move_base_msgs/MoveBaseAction.h>
 #include <nav_msgs/Odometry.h>
 #include <visualization_msgs/Marker.h>
 #include <actionlib/client/simple_action_client.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 
+#include "pick_objects/NavigationTarget.h"
+
 static nav_msgs::Odometry odom;
+static pick_objects::NavigationTarget target;
 
 geometry_msgs::Pose pose(double x, double y, double yaw) {
 
@@ -26,9 +28,10 @@ double distance(double x0, double y0, double x1, double y1) {
     return std::sqrt(std::pow(x1 - x0, 2) + std::pow(y1 - y0, 2));
 }
 
-visualization_msgs::Marker generateMarker(double x, double y) {
+void addMarker(double x, double y, const ros::Publisher &marker_pub) {
 
     visualization_msgs::Marker marker;
+
     marker.header.frame_id = "map";
     marker.header.stamp = ros::Time::now();
     marker.ns = "basic_shapes";
@@ -50,45 +53,62 @@ visualization_msgs::Marker generateMarker(double x, double y) {
     marker.color.a = 1.0;
 
     marker.lifetime = ros::Duration();
+
+    marker_pub.publish(marker);
+}
+
+void deleteMarker(const ros::Publisher &marker_pub) {
+
+    visualization_msgs::Marker marker;
+
+    marker.header.frame_id = "map";
+    marker.header.stamp = ros::Time::now();
+    marker.ns = "basic_shapes";
+    marker.id = 0;
+
+    marker.action = visualization_msgs::Marker::DELETEALL;
+
+    marker_pub.publish(marker);
 }
 
 void processOdometry(const nav_msgs::Odometry::ConstPtr& msg) {
     odom = *msg;
 }
 
+void processNavigationTarget(const pick_objects::NavigationTargetConstPtr &msg) {
+    target = *msg;
+}
+
 int main( int argc, char** argv )
 {
-    std::pair<double, double> dropZone{-1.325962, 1.325962};
-    std::vector<std::pair<double, double>> pickupZones{
-        {1.325962, 1.325962},
-        {1.325962, -1.325962},
-        {-1.0, -1.0}
-    };
-
     ros::init(argc, argv, "marker_node");
     ros::NodeHandle n;
     ros::Rate r(1);
 
-    // Generate markers/goals.
-    ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
+    // Generate markers.
+    ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("/visualization_marker", 1);
+
+    // Read goals.
+    ros::Subscriber target_sub = n.subscribe<pick_objects::NavigationTarget>("/navigation_targets", 10, processNavigationTarget);
 
     // Read robot position.
     ros::Subscriber odom_sub = n.subscribe<nav_msgs::Odometry>("/odom", 10, processOdometry);
 
     while (ros::ok()) {
+        ros::spinOnce();
 
-        visualization_msgs::Marker marker = generateMarker(0.0, 0.0);
-   
-        // Publish the marker
-        while (marker_pub.getNumSubscribers() < 1) {
-            if (!ros::ok()) {
-                return 0;
-            }
-            ROS_WARN_ONCE("Please create a subscriber to the marker");
-            sleep(1);
+        double d = distance(odom.pose.pose.position.x, odom.pose.pose.position.y, target.x, target.y);
+
+        if (target.type == "pick-up" && d > 20) {
+            addMarker(target.x, target.y, marker_pub);
+            target.type = "picking_up";
         }
-        marker_pub.publish(marker);
- 
+
+        if (target.type == "picking_up" && (d < 20)) {
+            deleteMarker(marker_pub);
+            target.type = "";
+        }
+
         r.sleep();
     }
 }

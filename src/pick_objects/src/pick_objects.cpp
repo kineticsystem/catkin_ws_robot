@@ -1,9 +1,6 @@
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
-#include <visualization_msgs/Marker.h>
-#include <geometry_msgs/Point.h>
 #include <actionlib/client/simple_action_client.h>
-#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <string>
 
 #include "pick_objects/NavigationTarget.h"
@@ -35,7 +32,7 @@ int main(int argc, char** argv) {
     ros::Rate r(1);
 
     // Read goals.
-    ros::Subscriber marker_sub = n.subscribe<pick_objects::NavigationTarget>("/navigation_targets", 10, processNavigationTarget);
+    ros::Subscriber target_sub = n.subscribe<pick_objects::NavigationTarget>("/navigation_targets", 10, processNavigationTarget);
 
     // Tell the action client that we want to spin a thread by default.
     MoveBaseClient ac("move_base", true);
@@ -45,7 +42,6 @@ int main(int argc, char** argv) {
     }
 
     while (ros::ok()) {
-
         ros::spinOnce();
 
         if (target.type == "pick-up") {
@@ -78,6 +74,8 @@ int main(int argc, char** argv) {
 
             ros::Duration(5.0).sleep();
         }
+
+        r.sleep();
     }
 
     return 0;

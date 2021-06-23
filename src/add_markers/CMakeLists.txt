@@ -6,7 +6,8 @@ set (CMAKE_CXX_FLAGS "-g")
 add_definitions(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
-    roscpp
+  roscpp
+  pick_objects
 )
 
 catkin_package(
