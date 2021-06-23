@@ -7,19 +7,19 @@ export ROBOT_INITIAL_POSE="-x -1.325962 -y 1.325962 -z 0 -R 0 -P 0 -Y 0";
 cd $BASE_DIR
 source devel/setup.bash
 
-# Run Gazebo.
+# Run Gazebo with custom world and robot initial poses.
 xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Gazebo" -e "
 roslaunch turtlebot_gazebo turtlebot_world.launch world_file:=$BASE_DIR/src/map/myworld.world" &
 sleep 5
 
-# Run the AMCL node.
+# Run the AMCL node with robot initial poses.
 xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "AMCL" -e "
 roslaunch turtlebot_gazebo amcl_demo.launch map_file:=$BASE_DIR/src/map/myworld.yaml initial_pose_x:=-1.325962 initial_pose_y:=1.325962 initial_pose_a:=0" &
 sleep 5
 
-# Run RVIZ node.
+# Run RVIZ node with a custom configuration file.
 xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "RVIZ" -e "
-roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+roslaunch add_markers view_navigation.launch config_file:=$BASE_DIR/src/rvizConfig/config_file.rviz" &
 sleep 5
 
 # Run Pick Objects node.

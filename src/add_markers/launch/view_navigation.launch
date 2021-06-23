@@ -1,0 +1,8 @@
+<!-- This file is used to start RVIZ with a custom configuration file. -->
+
+<launch>
+
+  <arg name="config_file" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg config_file)"/>
+
+</launch>

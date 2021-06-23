@@ -1,4 +1,6 @@
 .catkin_workspace
+catkin_ws_robot.workspace
+catkin_ws_robot.workspace.user
 /build/
 /devel/
 /src/CMakeLists.txt
