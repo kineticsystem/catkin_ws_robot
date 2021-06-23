@@ -6,14 +6,26 @@ set (CMAKE_CXX_FLAGS "-g")
 add_definitions(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
-    actionlib
+  actionlib
+  roscpp
+  rospy
+  std_msgs
+  message_generation
+)
+
+add_message_files(
+  FILES
+  NavigationTarget.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
 )
 
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES simple_arm
-#  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
+  CATKIN_DEPENDS
+  message_runtime
 )
 
 include_directories(include ${catkin_INCLUDE_DIRS})

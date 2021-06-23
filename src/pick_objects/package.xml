@@ -12,6 +12,8 @@
   <!-- Build tool packages -->
   <buildtool_depend>catkin</buildtool_depend>
 
+  <build_depend>message_generation</build_depend>
+
   <!-- Build and runtime dependencies -->
   <depend>roscpp</depend>
   <depend>actionlib</depend>
@@ -19,6 +21,7 @@
 
   <!-- Runtime dependencies -->
   <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
 
   <export>
     <!--<gazebo_ros gazebo_model_path="${prefix}/models"/>-->
