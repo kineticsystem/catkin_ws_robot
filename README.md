@@ -1,5 +1,11 @@
 # Udacity Robotics Engineering - Home Service Robot
 
+## Introduction
+
+This is a Udacity project where a robot is instructed to move around in an environment to pick-up and drop-off items.
+
+The core of this project is the development of two interacting nodes: "pick_objects_node" and "add_markers_node". I decided to create a custom message to instruct the robot where to move, to pick-up or drop-off an item. I also created a custom message for the robot to communicate when and where an item has been "loaded" or "deployed". This message is read by the "add_markers_node" to display the item in RVIZ.
+
 ## Test navigation
 
 Following a robot navigation test.
