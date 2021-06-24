@@ -42,7 +42,7 @@ Examples of such messages sent using rostopic command:
 
 ``rostopic pub -1 /navigation_command pick_objects/NavigationCommand -- drop-off 1.325962 -1.325962``
 
-The "pick_object_node" additionally sends custom messages of type "OperationStatus" to the topic "/operation_status". The message contains a string (either "deployed" or "loaded") and an (x,y) location where the robot is instructed to move.
+The "pick_objects_node" additionally sends custom messages of type "OperationStatus" to the topic "/operation_status". The message contains a string (either "deployed" or "loaded") and an (x,y) location where the robot is instructed to move.
 
 Examples of such messages set using rostopic commands:
 
