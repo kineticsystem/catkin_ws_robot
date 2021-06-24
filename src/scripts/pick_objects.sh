@@ -27,7 +27,6 @@ xterm -xrm 'XTerm.vt100.allowTitleOps: false' -T "Pick Objects" -e "
 roslaunch pick_objects pick_objects.launch;" &
 sleep 5
 
-# Send two custom goals.
-rostopic pub -1 /navigation_targets pick_objects/NavigationTarget -- 1.325962 1.325962 pick-up;
-rostopic pub -1 /navigation_targets pick_objects/NavigationTarget -- -1.325962 1.325962 drop-off;
-
+# Send navigation commands.
+rostopic pub -1 /navigation_command pick_objects/NavigationCommand -- pick-up   1.325962 1.325962
+rostopic pub -1 /navigation_command pick_objects/NavigationCommand -- drop-off -1.325962 1.325962

@@ -3,23 +3,34 @@
 #include <actionlib/client/simple_action_client.h>
 #include <string>
 
-#include "pick_objects/NavigationTarget.h"
+#include "pick_objects/NavigationCommand.h"
+#include "pick_objects/OperationStatus.h"
 
 // Define a client to send goal requests to the move_base server through a SimpleActionClient
 typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
-static pick_objects::NavigationTarget target;
+static pick_objects::NavigationCommand cmd;
 
-void processNavigationTarget(const pick_objects::NavigationTargetConstPtr &msg) {
-    target = *msg;
+void processNavigationCommand(const pick_objects::NavigationCommandConstPtr &msg) {
+    cmd = *msg;
 }
 
-move_base_msgs::MoveBaseGoal from(const pick_objects::NavigationTarget &target) {
+// Create a message about an item loaded or deployed.
+pick_objects::OperationStatus createStatus(std::string type, double x, double y) {
+    pick_objects::OperationStatus status;
+    status.type = type;
+    status.x = x;
+    status.y = y;
+    return status;
+}
+
+// Convert a simple navigation command into a robot navigation command with pose and orientation.
+move_base_msgs::MoveBaseGoal from(const pick_objects::NavigationCommand &cmd) {
     move_base_msgs::MoveBaseGoal goal;
     goal.target_pose.header.frame_id = "map";
     goal.target_pose.header.stamp = ros::Time::now();
-    goal.target_pose.pose.position.x = target.x;
-    goal.target_pose.pose.position.y = target.y;
+    goal.target_pose.pose.position.x = cmd.x;
+    goal.target_pose.pose.position.y = cmd.y;
     goal.target_pose.pose.orientation.w = 1.0;
     return goal;
 }
@@ -32,7 +43,10 @@ int main(int argc, char** argv) {
     ros::Rate r(1);
 
     // Read goals.
-    ros::Subscriber target_sub = n.subscribe<pick_objects::NavigationTarget>("/navigation_targets", 10, processNavigationTarget);
+    ros::Subscriber target_sub = n.subscribe<pick_objects::NavigationCommand>("/navigation_command", 10, processNavigationCommand);
+
+    // Notify status.
+    ros::Publisher status_pub = n.advertise<pick_objects::OperationStatus>("/operation_status", 1);
 
     // Tell the action client that we want to spin a thread by default.
     MoveBaseClient ac("move_base", true);
@@ -44,14 +58,17 @@ int main(int argc, char** argv) {
     while (ros::ok()) {
         ros::spinOnce();
 
-        if (target.type == "pick-up") {
-            target.type = "";
+        if (cmd.type == "pick-up") {
+            cmd.type = "";
 
-            ROS_INFO("Go to pickup zone  (x:%f,y:%f)", target.x, target.y);
-            ac.sendGoal(from(target));
+            status_pub.publish(createStatus("deployed", cmd.x, cmd.y));
+
+            ROS_INFO("Go to pickup zone  (x:%f,y:%f)", cmd.x, cmd.y);
+            ac.sendGoal(from(cmd));
             ac.waitForResult();
 
             if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
+                status_pub.publish(createStatus("loaded", cmd.x, cmd.y));
                 ROS_INFO("The robot reached the pickup zone.");
             } else {
                 ROS_INFO("The robot failed to reach the pickup zone.");
@@ -59,15 +76,18 @@ int main(int argc, char** argv) {
 
             ros::Duration(5.0).sleep();
 
-        } else if (target.type == "drop-off") {
-            target.type = "";
+        } else if (cmd.type == "drop-off") {
+            cmd.type = "";
 
-            ROS_INFO("Go to drop zone  (x:%f,y:%f)", target.x, target.y);
-            ac.sendGoal(from(target));
+            status_pub.publish(createStatus("loaded", cmd.x, cmd.y));
+
+            ROS_INFO("Go to drop zone  (x:%f,y:%f)", cmd.x, cmd.y);
+            ac.sendGoal(from(cmd));
             ac.waitForResult();
 
             if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
-                ROS_INFO("The robot reached the drop zone.");
+                status_pub.publish(createStatus("deployed", cmd.x, cmd.y));
+                ROS_INFO("The robot reached the drop off zone.");
             } else {
                 ROS_INFO("The robot failed to reach the drop zone.");
             }
