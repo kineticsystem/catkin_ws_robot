@@ -18,7 +18,14 @@ Following a SLAM test.
 
 ![SLAM](SLAM.gif "SLAM")
 
+Run the following command to start Gazebo, the AMCL localization node, RVIZ and a TeleOp console to control the robot.
+
+``src/scripts/test_slam.sh``
+
+When the robot is moved around, it builds a map of the environment.
+
 ## Home Service Robot
+
 Following a robot loading an item from a pick up zone and unloading it to a designated drop off zone.
 
 ![HOME](HOME.gif "HOME")
