@@ -4,6 +4,8 @@
 
 This is a Udacity project where a robot is instructed to move around in an environment to pick-up and drop-off items.
 
+The project has been developed on Linux Ubuntu 16.04 with ROS Kinetic.
+
 The core of this project is the development of two interacting nodes: "pick_objects_node" and "add_markers_node". I decided to create a custom message "NavigationCommand" to instruct the robot where to move, to pick-up or drop-off an item. I also created a custom message "OperationStatus" for the robot to communicate when and where an item has been "loaded" or "deployed". This message is read by the "add_markers_node" to display the item in RVIZ.
 
 ![Graph](graph.jpg "Graph")
